@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+/* font-family: 'Spartan', sans-serif; */
+
+/* base styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/bg-pattern-top-desktop.svg),
+    url(../images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0, bottom right 0px;
+  min-height: 100vh;
+}
+
+body > main {
+  margin: 0 auto;
+  max-width: 1440px;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  color: #582455;
+}
+
+#container {
+  padding: 126px 104px 99px 164px;
+}
+
+/*  header styles */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 75px;
+}
+
+#content {
+  width: calc(52% - 145px);
+}
+
+#ratings {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+header h1 {
+  font-size: 47px;
+  line-height: 51px;
+  padding-bottom: 15px;
+}
+
+header p {
+  font-weight: 500;
+  line-height: 28px;
+  max-width: 445px;
+}
+
+#content p {
+  color: #cbc1c9;
+}
+
+#ratings p {
+  background-color: #f7f2f8;
+  height: 56px;
+  width: 445px;
+  border-radius: 6px;
+  color: #5b3859;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 17px;
+  padding-top: 29px;
+  padding-left: 179px;
+  line-height: 0;
+  background-image: url(../images/icon-star.svg), url(../images/icon-star.svg),
+    url(../images/icon-star.svg), url(../images/icon-star.svg),
+    url(../images/icon-star.svg);
+  background-repeat: no-repeat;
+  background-position-x: 32px, 57px, 82px, 107px, 131px;
+  background-position-y: 19px;
+}
+
+#ratings p:nth-of-type(1) {
+  margin-right: 96px;
+}
+
+#ratings p:nth-of-type(2) {
+  margin-right: 47px;
+}
+
+/* article styles */
+
+article {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+section {
+  background-color: #511f50;
+  border-radius: 6px;
+  color: #eee1f2;
+  min-height: 234px;
+  max-width: 31%;
+  padding: 39px 30px 0 30px;
+}
+
+section h3 {
+  color: #8d3e75;
+}
+
+article section:nth-of-type(2) {
+  margin-top: 17px;
+}
+
+article section:nth-of-type(3) {
+  margin-top: 34px;
+}
+
+section #identity {
+  display: flex;
+  justify-content: space-between;
+}
+
+section img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  clip-path: circle(50%);
+}
+
+#identity div {
+  width: calc(100% - 63px);
+}
+
+section h2 {
+  font-size: 13px;
+  padding-bottom: 5px;
+}
+
+section h3 {
+  font-size: 13px;
+}
+
+section p {
+  font-size: 13px;
+  padding-top: 26px;
+  line-height: 24px;
+  padding-bottom: 25px;
+}
+
+/* media queries - responsive design */
+
+@media screen and (max-width: 1199px) {
+  #ratings p:nth-of-type(1) {
+    margin-right: 0;
+  }
+
+  #ratings p:nth-of-type(2) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1095px) {
+  header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #content {
+    width: 100%;
+  }
+
+  #ratings {
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  header p {
+    max-width: 100%;
+  }
+
+  #content h1 {
+    text-align: center;
+  }
+
+  #content p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 987px) {
+  article {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  section {
+    max-width: 350px;
+  }
+
+  article section:nth-of-type(2) {
+    margin-top: 34px;
+  }
+}
+
+/* mobile design */
+
+@media screen and (max-width: 717px) {
+  body {
+    background-image: url(../images/bg-pattern-top-mobile.svg),
+      url(../images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0, bottom right 0px;
+    min-height: 100vh;
+  }
+
+  #container {
+    padding: 90px 24px 99px 24px;
+  }
+
+  header h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  #content p {
+    line-height: 25px;
+  }
+
+  #ratings {
+    margin-top: 21px;
+  }
+
+  #ratings p {
+    height: 78px;
+    padding-top: 55px;
+    padding-left: 0;
+    text-align: center;
+    background-position-x: 34%, 42%, 50%, 58%, 66%;
+    background-position-y: 15px;
+  }
+
+  header {
+    padding-bottom: 48px;
+  }
+
+  article section:nth-of-type(2) {
+    margin-top: 15px;
+  }
+
+  article section:nth-of-type(3) {
+    margin-top: 15px;
+  }
+}
