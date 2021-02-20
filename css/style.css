@@ -121,7 +121,7 @@ article section:nth-of-type(3) {
   margin-top: 34px;
 }
 
-section #identity {
+section .identity {
   display: flex;
   justify-content: space-between;
 }
@@ -133,7 +133,7 @@ section img {
   clip-path: circle(50%);
 }
 
-#identity div {
+.identity div {
   width: calc(100% - 63px);
 }
 
